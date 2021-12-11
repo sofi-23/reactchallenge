@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
+.App {
+  font-family: 'Barlow Condensed', sans-serif;
+  background: #1E1E1E;
+  font-size: 16px;
+}
+
+.loginContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.loginContainer .loginHeader {
+  text-align: center;
+}
+
+.loginContainer .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  padding-top: 2rem;
+  background-color: #FFFFFF;
+  padding-bottom: 2rem;
+}
+
+.loginContainer .form div {
+  width: 50%;
+}
+/*# sourceMappingURL=main.css.map */
