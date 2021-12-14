@@ -21,4 +21,11 @@
             width: 50%;
         }
     }
+    .errorsContainer {
+        background: red;
+        width: 60%;
+        height: 2rem;
+        color: $white;
+        text-align: center;
+    }
 }

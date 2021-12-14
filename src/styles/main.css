@@ -49,4 +49,12 @@
 .loginContainer .form div {
   width: 50%;
 }
+
+.loginContainer .errorsContainer {
+  background: red;
+  width: 60%;
+  height: 2rem;
+  color: #FFFFFF;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

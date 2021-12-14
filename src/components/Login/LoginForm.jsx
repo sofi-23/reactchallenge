@@ -1,33 +1,40 @@
 
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
-export default function LoginForm() {
+
+export default function LoginForm({handleSubmit, handleChange, values, handleBlur}) {
+
     return(
-        <div className="loginContainer">
-            <Form className="form"> 
+            <Form className="form" onSubmit={handleSubmit}> 
                 <h2 className="loginHeader">Login</h2>
                 <FormGroup>
-                    <Label for="email" hidden>Email</Label>
+                    <Label for="email" hidden >Email</Label>
                     <Input
                         id="email"
                         name="email"
                         placeholder="Email"
                         type="email"
+                        value= {values.email}
+                        onChange={handleChange}
+                        //onBlur={handleBlur}
                         />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="password" hidden>Name</Label>
+                    <Label for="password" hidden >Password</Label>
                     <Input
                         id="password"
                         name="password"
                         placeholder="Password"
                         type="password"
+                        value= {values.password}
+                        onChange={handleChange}
+                        //onBlur={handleBlur}
+                        
                         />
                 </FormGroup>
-                <Button className="formButton">
+                <Button type="submit" className="formButton" >
                 Submit
                 </Button>
             </Form>
-        </div>
     )   
 }
