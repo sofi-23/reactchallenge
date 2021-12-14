@@ -1,8 +1,8 @@
-import LoginForm  from '../components/Login/LoginForm'
+import LoginForm  from '../../components/Login/LoginForm'
 import { Formik } from 'formik'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useLoginContext } from '../context/Context'
+import { useLoginContext } from '../../context/Context'
 
 export default function Login () {
     const navigate = useNavigate()

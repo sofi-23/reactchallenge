@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
 .App {
-  font-family: 'Barlow Condensed', sans-serif;
   background: #1E1E1E;
   font-size: 16px;
+}
+
+* {
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 .loginContainer {
@@ -51,10 +54,30 @@
 }
 
 .loginContainer .errorsContainer {
-  background: red;
+  background: #EC1D24;
   width: 60%;
   height: 2rem;
   color: #FFFFFF;
   text-align: center;
+}
+
+.navbar {
+  background: #2F2F2F;
+}
+
+.navbar .navTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #FFFFFF;
+  background: #EC1D24;
+}
+
+.teamContainer {
+  text-align: center;
+  background: #1E1E1E;
+  height: 100vh;
+}
+
+.teamContainer .teamHeader {
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=main.css.map */
