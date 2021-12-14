@@ -1,18 +1,31 @@
 import LoginForm  from '../components/Login/LoginForm'
 import { Formik } from 'formik'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useLoginContext } from '../context/Context'
 
 export default function Login () {
     const navigate = useNavigate()
     const [emptyInputs, setEmptyInputs] = useState(false)
     const [wrongLogin, setWrongLogin] = useState(false)
 
+    const { loggedIn, handleLoggedIn } = useLoginContext()
+  
+        useEffect(() => {  
+            if (loggedIn === true ) {
+            navigate('/home') 
+            console.log("PASO EL IF DEL USEEFFECT")
+            }
+    }, [loggedIn])
+   
+    
+
     const handleOnSubmit =(e) => {
         if (e.password === "react" && e.email === "challenge@alkemy.org") {
             window.sessionStorage.setItem("loggedIn", true);
+            handleLoggedIn(true)
             setWrongLogin(false)
-            navigate("/home")
+            
         }else{
             window.sessionStorage.setItem("loggedIn", false) 
             setWrongLogin(true)
