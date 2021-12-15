@@ -2,18 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { LoginContextProvider } from './context/Context';
+import { ContextProvider } from './context/Context';
 import {  BrowserRouter } from 'react-router-dom';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <LoginContextProvider>
+    <ContextProvider>
       <BrowserRouter>
       <App />
       </BrowserRouter>
-    </LoginContextProvider>
+    </ContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

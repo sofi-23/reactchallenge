@@ -6,14 +6,14 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 import Header from './components/Header/Header'
 import  HeroeDetailContainer  from './pages/HeroDetail/HeroeDetailContainer';
 import { useEffect } from 'react';
-import { useLoginContext } from './context/Context'
+import { useAppContext } from './context/Context'
 import NotFound from './pages/NotFound/NotFound'
 
 function App() {
   //10159573617364605	token API
-  const { loggedIn, handleLoggedIn } = useLoginContext()
+  const { loggedIn, setLoggedIn } = useAppContext()
   useEffect(() => {
-    handleLoggedIn(window.sessionStorage.getItem('loggedIn'))
+    setLoggedIn(window.sessionStorage.getItem('loggedIn'))
     console.log(loggedIn)
   }, [loggedIn])
   

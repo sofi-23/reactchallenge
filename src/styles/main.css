@@ -74,10 +74,25 @@
 .teamContainer {
   text-align: center;
   background: #1E1E1E;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .teamContainer .teamHeader {
   color: #FFFFFF;
+  padding-top: 3rem;
+}
+
+.teamContainer .errorMessage {
+  background: #EC1D24;
+  color: #FFFFFF;
+}
+
+.teamContainer .heroesResultContainer {
+  min-height: 100vh;
+}
+
+.card {
+  width: 18rem !important;
 }
 /*# sourceMappingURL=main.css.map */

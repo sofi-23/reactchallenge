@@ -1,25 +1,25 @@
 import { createContext, useState, useContext } from 'react';
 
-const loginContext = createContext();
+const appContext = createContext();
 
-export const useLoginContext = ()=> useContext(loginContext);
+export const useAppContext = ()=> useContext(appContext);
 
-export function LoginContextProvider ({children}) {
+export function ContextProvider ({children}) {
 
     const [loggedIn, setLoggedIn] = useState(false)
-    
-    const handleLoggedIn = (bool) => {
-        return setLoggedIn(bool)
-    }
+    const [team, setTeam] = useState([])
+
 
     return (
         <>
-            <loginContext.Provider value={{
+            <appContext.Provider value={{
                 loggedIn,
-                handleLoggedIn,
+                setLoggedIn,
             }}>
                 {children}
-            </loginContext.Provider>
+            </appContext.Provider>
         </>
     )
 }
+
+
