@@ -12,10 +12,10 @@ import NotFound from './pages/NotFound/NotFound'
 function App() {
   //10159573617364605	token API
   const { loggedIn, setLoggedIn } = useAppContext()
+
   useEffect(() => {
     setLoggedIn(window.sessionStorage.getItem('loggedIn'))
-    console.log(loggedIn)
-  }, [loggedIn])
+  }, [])
   
   return (
     <>

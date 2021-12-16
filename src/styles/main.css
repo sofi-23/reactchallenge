@@ -94,5 +94,15 @@
 
 .card {
   width: 18rem !important;
+  margin: 2rem;
+}
+
+.card .btn {
+  background: #EC1D24;
+  border: 1px solid grey;
+}
+
+.card .btn:hover {
+  background: red;
 }
 /*# sourceMappingURL=main.css.map */

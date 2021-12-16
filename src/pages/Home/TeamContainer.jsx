@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import Searchbar from "../../components/Seachbar/Searchbar"
 import { Formik } from 'formik'
 import HeroCard from "../../components/HeroCard/HeroCard"
+import Team from "./Team"
 
 export default function TeamContainer () {
     const [heroName, setHeroName] = useState("");
@@ -45,8 +46,7 @@ export default function TeamContainer () {
                 }
             :
             <div className="teamContainer ">
-                <h1 className="teamHeader pt-5">Say hello to your Team: </h1>
-                <span>Here goes the team</span>
+                <Team />
                 <Formik 
                     validateOnChange={false}
                     initialValues={
@@ -75,9 +75,9 @@ export default function TeamContainer () {
                         heroesFound ?
                         heroesFound.map((hero) => {
                             return (
-                            <HeroCard key={hero.id} name={hero.name} img={hero.image.url} />
+                            <HeroCard key={hero.id} props={hero} />
                             )
-                        }): 
+                        }): loading &&
                         <div className="errorMessage"> {error}  </div>
                     }
                     </div>
