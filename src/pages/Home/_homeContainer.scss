@@ -1,20 +1,22 @@
-.teamContainer {
+.homeContainer {
     text-align: center;
     background: $background-color;
     min-height: 100vh;
     height: 100%;
-    
-    
     .teamHeader {
     color: $white;
     padding-top: 3rem;
     }
-
+    .emptyTeamMessage {
+        color: $white
+    }
     .errorMessage {
         background: $red;
         color: $white;
     }
     .heroesResultContainer {
-        min-height: 100vh;
+        height: 100%;
     }
+    
+
 }

@@ -71,25 +71,29 @@
   background: #EC1D24;
 }
 
-.teamContainer {
+.homeContainer {
   text-align: center;
   background: #1E1E1E;
   min-height: 100vh;
   height: 100%;
 }
 
-.teamContainer .teamHeader {
+.homeContainer .teamHeader {
   color: #FFFFFF;
   padding-top: 3rem;
 }
 
-.teamContainer .errorMessage {
+.homeContainer .emptyTeamMessage {
+  color: #FFFFFF;
+}
+
+.homeContainer .errorMessage {
   background: #EC1D24;
   color: #FFFFFF;
 }
 
-.teamContainer .heroesResultContainer {
-  min-height: 100vh;
+.homeContainer .heroesResultContainer {
+  height: 100%;
 }
 
 .card {
@@ -104,5 +108,69 @@
 
 .card .btn:hover {
   background: red;
+}
+
+.teamCard {
+  position: relative;
+  width: 240px;
+  height: 340px;
+  color: #FFFFFF;
+  margin: auto;
+  background: black;
+  margin-top: 4rem;
+  cursor: pointer;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.teamCard:hover {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+}
+
+.cardFront {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.cardFront img {
+  width: 240px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: #EC1D24;
+}
+
+.cardBack {
+  background: #4e8c42;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+}
+
+.cardBack h3 {
+  color: #000000;
+}
+
+.emptyCard img {
+  height: 100%;
+}
+
+.cardBack.notEmptyCard {
+  background: #000000;
+}
+
+.cardBack.notEmptyCard h3 {
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=main.css.map */

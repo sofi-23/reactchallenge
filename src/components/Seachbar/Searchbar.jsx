@@ -4,7 +4,7 @@ import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 export default function Searchbar({handleSubmit, values, handleChange}) {
 
     return (
-        <>  <Form className="form w-50 m-auto"  onSubmit={handleSubmit} >
+        <>  <Form className="form w-50 pt-5 m-auto"  onSubmit={handleSubmit} >
                 <FormGroup>
                     <Label for="search" hidden >Search hero</Label>
                     <Input id="search"    

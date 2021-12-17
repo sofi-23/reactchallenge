@@ -6,6 +6,7 @@ import Searchbar from "../../components/Seachbar/Searchbar"
 import { Formik } from 'formik'
 import HeroCard from "../../components/HeroCard/HeroCard"
 import Team from "./Team"
+import {Container, Row, Col} from 'reactstrap'
 
 export default function TeamContainer () {
     const [heroName, setHeroName] = useState("");
@@ -45,7 +46,7 @@ export default function TeamContainer () {
                 navigate("/")
                 }
             :
-            <div className="teamContainer ">
+            <div className="homeContainer" >
                 <Team />
                 <Formik 
                     validateOnChange={false}
@@ -69,22 +70,31 @@ export default function TeamContainer () {
                     <Searchbar handleSubmit={handleSubmit} values={values} handleChange={handleChange} />
                     )}
                     </Formik>
-                <div className="heroesResultContainer">
-                <div className="d-flex m-5 flex-wrap justify-content-evenly">
-                    {   loading ? <div>LOADING</div> :
-                        heroesFound ?
-                        heroesFound.map((hero) => {
-                            return (
-                            <HeroCard key={hero.id} props={hero} />
-                            )
-                        }): loading &&
-                        <div className="errorMessage"> {error}  </div>
-                    }
+                    <div className="heroesResultContainer">
+                        <div className="d-flex m-5 flex-wrap justify-content-evenly">
+                            <Container>
+                                <Row>
+                                {  loading ? <div>LOADING</div> :
+                                    heroesFound ?
+                                        heroesFound.map((hero) => {
+                                            return ( 
+                                            <Col key={hero.id} md={4}>
+                                                <HeroCard key={hero.id} props={hero} />
+                                            </Col>
+                                        )
+                                    }): loading &&
+                                    <div className="errorMessage"> {error}  </div>
+                                }
+                            
+                                </Row>
+                            </Container>
+
+                        </div>
                     </div>
-                </div>
             </div>  
         
         }
+
         </>  
     )
 
