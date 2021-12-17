@@ -47,6 +47,7 @@ export default function TeamContainer () {
                 }
             :
             <div className="homeContainer" >
+                
                 <Team />
                 <Formik 
                     validateOnChange={false}

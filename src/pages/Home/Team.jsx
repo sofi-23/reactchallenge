@@ -20,8 +20,10 @@ export default function Team () {
                     <Col><TeamMember props={team[4]?team[4] : false}/></Col>
                     <Col><TeamMember props={team[5]?team[5] : false}/></Col>
                     <Col><TeamMember props={team[2]?team[2] : false}/></Col>
-                </Row>
-                <Row className="mt-5">
+                </Row>  
+            </Container>
+            <Container>
+                <Row className="mt-5 backgroundStats">
                     <Col>
                     <GeneralStats />
                     </Col>

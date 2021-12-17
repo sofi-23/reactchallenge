@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, useEffect } from 'react';
+import { createContext, useState, useContext } from 'react';
 
 const appContext = createContext();
 
@@ -21,48 +21,37 @@ export function ContextProvider ({children}) {
         {powerstat: "power", value: 0},
         {powerstat: "combat", value: 0},
     ])
-/* 
-    useEffect(() => {
-        setTimeout(() => {
-           
-            console.log(powerstats)  
-            console.log(bestPowerstat) //va atrasado 1
-        }, 2000);
-        
-    }, [powerstats]) */
+
     
     const handlePowerstats = (ps, added) => {
         if (added) {
             setPowerstats([
-                {powerstat: "intelligence", value: powerstats[0].value + parseInt(ps.intelligence)},
-                {powerstat: "strength", value:  powerstats[1].value + parseInt(ps.strength)},
-                {powerstat: "speed", value:  powerstats[2].value + parseInt(ps.speed)},
-                {powerstat: "durability", value:  powerstats[3].value + parseInt(ps.durability)}, 
-                {powerstat: "power", value:  powerstats[4].value + parseInt(ps.power)},
-                {powerstat: "combat", value:  powerstats[5].value + parseInt(ps.combat)},
+                {powerstat: "intelligence", value: (ps.intelligence !== "null" ? powerstats[0].value + parseInt(ps.intelligence) : powerstats[0].value) },
+                {powerstat: "strength", value: ps.strength !== "null" ? powerstats[1].value +  parseInt(ps.strength) : powerstats[1].value},
+                {powerstat: "speed", value:  ps.speed !== "null" ? powerstats[2].value + parseInt(ps.speed): powerstats[2].value},
+                {powerstat: "durability", value:  ps.durability !== "null" ? powerstats[3].value + parseInt(ps.durability): powerstats[3].value}, 
+                {powerstat: "power", value: ps.power !== "null" ? powerstats[4].value +  parseInt(ps.power) : powerstats[4].value},
+                {powerstat: "combat", value:  ps.combat !== "null" ? powerstats[5].value +   parseInt(ps.combat): powerstats[5].value },
             ])
         }else {
             setPowerstats([
-                {powerstat: "intelligence", value: powerstats[0].value - parseInt(ps.intelligence)},
-                {powerstat: "strength", value:  powerstats[1].value - parseInt(ps.strength)},
-                {powerstat: "speed", value:  powerstats[2].value - parseInt(ps.speed)},
-                {powerstat: "durability", value:  powerstats[3].value - parseInt(ps.durability)}, 
-                {powerstat: "power", value:  powerstats[4].value - parseInt(ps.power)},
-                {powerstat: "combat", value:  powerstats[5].value - parseInt(ps.combat)},
+                {powerstat: "intelligence", value: ps.intelligence !== "null"  ? powerstats[0].value - parseInt(ps.intelligence) : powerstats[0].value},
+                {powerstat: "strength", value: ps.strength !== "null" ? powerstats[1].value -  parseInt(ps.strength): powerstats[1].value},
+                {powerstat: "speed", value: ps.speed !== "null" ? powerstats[2].value - parseInt(ps.speed): powerstats[2].value},
+                {powerstat: "durability", value: ps.durability !== "null" ? powerstats[3].value - parseInt(ps.durability): powerstats[3].value}, 
+                {powerstat: "power", value:  ps.power !== "null" ? powerstats[4].value -  parseInt(ps.power): powerstats[4].value},
+                {powerstat: "combat", value: ps.combat !== "null" ? powerstats[5].value -   parseInt(ps.combat): powerstats[5].value},
             ])
         }
-        setTimeout(() => {
             checkBestPowerstat()      
             console.log(bestPowerstat)
-        }, 2000);
-        
-    }
+    } 
+    
     const checkBestPowerstat = () => {
         const values = powerstats.map(v=> v.value)
         let maxValue = Math.max.apply(null, values) 
         const bestPs = powerstats.filter(it=> it.value === maxValue && it.powerstat)
         setBestPowerstat(bestPs.map(it=> it.powerstat))
-        
         return bestPowerstat
     } 
 
@@ -75,6 +64,7 @@ export function ContextProvider ({children}) {
                     setTeam([...team, hero])
                     setHeroes(heroes + 1)
                     handlePowerstats(hero.powerstats, true)
+                    console.log("HERO ADDED")
                 }else {
                     setError("You already have three heroes. Delete one before adding a new one.")
                 }
@@ -82,6 +72,7 @@ export function ContextProvider ({children}) {
                 setTeam([...team, hero])
                 setVillains(villains + 1)
                 handlePowerstats(hero.powerstats, true)
+                console.log("VILAIN ADDED")
             }else {
                 setError("You already have three villains. Delete one before adding a new one.")
             }
@@ -91,6 +82,10 @@ export function ContextProvider ({children}) {
     }else {
         setError("That hero is already on your team")
     }
+    console.log(error)
+    setTimeout(() => {
+        
+    }, 2000);
     }
     const isItGood = (id) => {
         const hero = team.filter(h=> h.id === id)

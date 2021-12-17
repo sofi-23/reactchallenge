@@ -1,0 +1,25 @@
+.powerstatTitle {
+    color: $white;
+}
+
+.generalProgressBar {
+    height: 1.5rem !important; 
+    background-color: rgb(140, 182, 140) !important;
+}
+
+.backgroundStats{
+    background: black;
+    padding: 5rem;
+    border: 3px solid #17A435;
+    border-radius: 29px;
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 1rem;
+    }
+    .numberContainer {
+        display: flex;
+        align-items:center;
+        color: $white
+    }
+
+}
