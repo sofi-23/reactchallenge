@@ -98,6 +98,7 @@
 
 .card {
   width: 18rem !important;
+  height: 30rem;
   margin: 2rem;
 }
 
@@ -108,6 +109,10 @@
 
 .card .btn:hover {
   background: red;
+}
+
+.card img {
+  height: 75%;
 }
 
 .teamCard {
@@ -176,6 +181,11 @@
 
 .emptyTeamMessage {
   font-size: 2.5em;
+}
+
+.modalHeadings {
+  font-size: 1.5em;
+  padding: 1em;
 }
 
 .powerstatTitle {

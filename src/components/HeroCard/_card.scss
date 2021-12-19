@@ -1,5 +1,6 @@
 .card {
     width: 18rem !important;
+    height: 30rem;
     margin: 2rem;
     .btn {
         background: $red;
@@ -7,5 +8,8 @@
         &:hover {
             background: red
         }
+    }
+    img {
+        height: 75%;
     }
 }

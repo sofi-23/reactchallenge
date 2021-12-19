@@ -4,12 +4,12 @@ import { Container, Row, Col } from 'reactstrap'
 
 export default function GeneralStats () {
     const { powerstats, bestPowerstat } = useAppContext()
-    console.log(powerstats)
+
     return (
         <Container >
             <Row>
             <h2 style={{color: "#ffff"}}>Team powerstats: </h2>
-            {bestPowerstat !== [] && 
+            {bestPowerstat.length !== 6 && 
             <h3>Team's main power: {bestPowerstat.map(pw=> pw + " ")}</h3>
             }
             </Row>
