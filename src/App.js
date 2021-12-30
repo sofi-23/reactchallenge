@@ -4,7 +4,6 @@ import  TeamContainer  from './pages/Home/TeamContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Header from './components/Header/Header'
-import  HeroeDetailContainer  from './pages/HeroDetail/HeroeDetailContainer';
 import { useAppContext } from './context/Context'
 import NotFound from './pages/NotFound/NotFound'
 
@@ -20,7 +19,6 @@ function App() {
     <Routes> 
       <Route path="/" element={ <Login/> }/>
       <Route element={ loggedIn ? <Outlet /> : <Login />} >
-                <Route path="/heroeDetail/:heroId" element={<HeroeDetailContainer /> } />
                 <Route path="/home" element={<TeamContainer/> } />
                 <Route
                 path="*"

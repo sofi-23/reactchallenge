@@ -26,23 +26,21 @@ export function ContextProvider ({children}) {
     const handlePowerstats =  (ps, added) => {
             if (added) {
                 setPowerstats([
-                    {powerstat: "intelligence", value: (ps.intelligence !== "null" ? powerstats[0].value + parseInt(ps.intelligence) : powerstats[0].value) },
-                    {powerstat: "strength", value: ps.strength !== "null" ? powerstats[1].value +  parseInt(ps.strength) : powerstats[1].value},
-                    {powerstat: "speed", value:  ps.speed !== "null" ? powerstats[2].value + parseInt(ps.speed): powerstats[2].value},
-                    {powerstat: "durability", value:  ps.durability !== "null" ? powerstats[3].value + parseInt(ps.durability): powerstats[3].value}, 
-                    {powerstat: "power", value: ps.power !== "null" ? powerstats[4].value +  parseInt(ps.power) : powerstats[4].value},
-                    {powerstat: "combat", value:  ps.combat !== "null" ? powerstats[5].value +   parseInt(ps.combat): powerstats[5].value },
+                    {powerstat: "Intelligence", value: (ps.intelligence !== "null" ? powerstats[0].value + parseInt(ps.intelligence) : powerstats[0].value) },
+                    {powerstat: "Strength", value: ps.strength !== "null" ? powerstats[1].value +  parseInt(ps.strength) : powerstats[1].value},
+                    {powerstat: "Speed", value:  ps.speed !== "null" ? powerstats[2].value + parseInt(ps.speed): powerstats[2].value},
+                    {powerstat: "Durability", value:  ps.durability !== "null" ? powerstats[3].value + parseInt(ps.durability): powerstats[3].value}, 
+                    {powerstat: "Power", value: ps.power !== "null" ? powerstats[4].value +  parseInt(ps.power) : powerstats[4].value},
+                    {powerstat: "Combat", value:  ps.combat !== "null" ? powerstats[5].value +   parseInt(ps.combat): powerstats[5].value },
                 ]) 
-                /* console.log("SE EJECUTO SETPOWERSTATS")
-             */
             }else {
                 setPowerstats([
-                    {powerstat: "intelligence", value: ps.intelligence !== "null"  ? powerstats[0].value - parseInt(ps.intelligence) : powerstats[0].value},
-                    {powerstat: "strength", value: ps.strength !== "null" ? powerstats[1].value -  parseInt(ps.strength): powerstats[1].value},
-                    {powerstat: "speed", value: ps.speed !== "null" ? powerstats[2].value - parseInt(ps.speed): powerstats[2].value},
-                    {powerstat: "durability", value: ps.durability !== "null" ? powerstats[3].value - parseInt(ps.durability): powerstats[3].value}, 
-                    {powerstat: "power", value:  ps.power !== "null" ? powerstats[4].value -  parseInt(ps.power): powerstats[4].value},
-                    {powerstat: "combat", value: ps.combat !== "null" ? powerstats[5].value -   parseInt(ps.combat): powerstats[5].value},
+                    {powerstat: "Intelligence", value: ps.intelligence !== "null"  ? powerstats[0].value - parseInt(ps.intelligence) : powerstats[0].value},
+                    {powerstat: "Strength", value: ps.strength !== "null" ? powerstats[1].value -  parseInt(ps.strength): powerstats[1].value},
+                    {powerstat: "Speed", value: ps.speed !== "null" ? powerstats[2].value - parseInt(ps.speed): powerstats[2].value},
+                    {powerstat: "Durability", value: ps.durability !== "null" ? powerstats[3].value - parseInt(ps.durability): powerstats[3].value}, 
+                    {powerstat: "Power", value:  ps.power !== "null" ? powerstats[4].value -  parseInt(ps.power): powerstats[4].value},
+                    {powerstat: "Combat", value: ps.combat !== "null" ? powerstats[5].value -   parseInt(ps.combat): powerstats[5].value},
                 ])
                     
             } 

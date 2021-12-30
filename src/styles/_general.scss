@@ -1,7 +1,11 @@
 .App {
-    background: $background-color;
+    /* background: $background-color; */
     font-size: 16px;
 }
 * {
     font-family: $font;
+}
+
+html {
+    background: $background-color;
 }

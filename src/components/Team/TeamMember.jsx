@@ -41,18 +41,19 @@ export default function TeamMember (props) {
                                     <button className={`p-1 btn btn-${isItGood(props.props.id) ? "primary" : "danger"}`} onClick={()=> removeFromTeam(props.props.id, props.props.powerstats)}> Remove</button>
                                     <button  className={`p-1 btn btn-${isItGood(props.props.id) ? "primary" : "danger"}`} onClick={()=>toggle()} >Details</button>
                                         <Modal 
+                                        className="modal"
                                         isOpen={modal}  
                                         centered
                                         fullscreen=""
-                                        size="xl" >
-                                            <ModalHeader toggle={()=>toggle()}>
+                                        size="lg" >
+                                            <ModalHeader className="modalHeader" toggle={()=>toggle()}>
                                                 {props.props.name}
                                             </ModalHeader>
                                             <ModalBody>
                                                 <Container fluid>
                                                     <Row>
-                                                    <Col md={6}><img src={props.props.image.url} alt={props.props.name} /></Col>
-                                                        <Col md={6} className="d-flex flex-column align-items-start justify-content-center">
+                                                    <Col md={6}><img className="modalImage" src={props.props.image.url} alt={props.props.name} /></Col>
+                                                        <Col md={4} className="d-flex flex-column align-items-start justify-content-center">
                                                                 <h5 className="modalHeadings">Alter-ego:{props.props.biography["alter-ego"]}</h5>
                                                                 <h5 className="modalHeadings">Wieght: {props.props.appearance.weight}</h5>
                                                                 <h5 className="modalHeadings">Height: {props.props.appearance.height}</h5>

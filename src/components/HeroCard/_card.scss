@@ -3,11 +3,7 @@
     height: 30rem;
     margin: 2rem;
     .btn {
-        background: $red;
         border: 1px solid grey;
-        &:hover {
-            background: red
-        }
     }
     img {
         height: 75%;

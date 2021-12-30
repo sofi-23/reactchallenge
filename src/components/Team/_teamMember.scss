@@ -56,8 +56,24 @@
   .emptyTeamMessage {
     font-size: 2.5em;
   }
-
-  .modalHeadings {
-    font-size: 1.5em;
-    padding: 1em;
-  }
+  .modal {
+      .modalHeader {
+        background: $nav-color;
+        h5 {
+          color: $white;
+        }
+      }
+      .modal-body {
+        background: $background-color;
+        .modalImage {
+          height: 60vh;
+        }
+        .modalHeadings {
+        font-size: 1.3em;
+        padding: .8em;
+        color: $white;
+        margin-left: 1.5rem;
+      }
+      }
+      
+}

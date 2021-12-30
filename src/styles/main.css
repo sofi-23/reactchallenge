@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
 .App {
-  background: #1E1E1E;
+  /* background: $background-color; */
   font-size: 16px;
 }
 
 * {
   font-family: "Barlow Condensed", sans-serif;
+}
+
+html {
+  background: #1E1E1E;
 }
 
 .loginContainer {
@@ -103,12 +107,7 @@
 }
 
 .card .btn {
-  background: #EC1D24;
   border: 1px solid grey;
-}
-
-.card .btn:hover {
-  background: red;
 }
 
 .card img {
@@ -183,9 +182,27 @@
   font-size: 2.5em;
 }
 
-.modalHeadings {
-  font-size: 1.5em;
-  padding: 1em;
+.modal .modalHeader {
+  background: #2F2F2F;
+}
+
+.modal .modalHeader h5 {
+  color: #FFFFFF;
+}
+
+.modal .modal-body {
+  background: #1E1E1E;
+}
+
+.modal .modal-body .modalImage {
+  height: 60vh;
+}
+
+.modal .modal-body .modalHeadings {
+  font-size: 1.3em;
+  padding: .8em;
+  color: #FFFFFF;
+  margin-left: 1.5rem;
 }
 
 .powerstatTitle {
