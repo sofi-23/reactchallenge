@@ -3,7 +3,7 @@ import { Formik } from 'formik'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppContext } from '../../context/Context'
-/* import axios from 'axios'; */
+ import axios from 'axios'; 
 
 export default function Login () {
     const navigate = useNavigate()
@@ -21,16 +21,8 @@ export default function Login () {
     
 
     const handleOnSubmit =(e) => {
-        
-      /*   const data = {
-            email: e.email,
-            password: e.password
-        }
-        axios.post('http://localhost:3000/', data)
-        .then(res=> console.log(res)) 
-        .catch(err=>console.log(err)) */
 
-         if (e.password === "react" && e.email === "challenge@alkemy.org") {
+    if (e.password === "react" && e.email === "challenge@alkemy.org") {
             window.sessionStorage.setItem("loggedIn", true);
             setLoggedIn(true)
             setWrongLogin(false)
